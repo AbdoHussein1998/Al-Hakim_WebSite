@@ -799,18 +799,14 @@ section,
 }
 
 /* Optional: Different object-fit behavior on mobile */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .hero img {
     object-fit: cover; /* Keep cover, but you could use 'contain' if preferred */
     object-position: center center; /* Control focal point */
   }
 }
 
-@media (max-width: 576px) {
-  .hero img {
-    object-position: center 30%; /* Adjust focal point for mobile if needed */
-  }
-}
+
 
 /*--------------------------------------------------------------
 # About Section
