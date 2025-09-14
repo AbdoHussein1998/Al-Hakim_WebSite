@@ -710,13 +710,105 @@ section,
   color: var(--accent-color);
 }
 
+/* Enhanced responsive design for hero section */
+@media (max-width: 992px) {
+  .hero {
+    min-height: 80vh;
+    padding: 60px 0;
+  }
+  
+  .hero h2 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 22px;
+  }
+  
+  .hero .social-links {
+    margin-top: 20px;
+  }
+  
+  .hero .social-links a {
+    font-size: 22px;
+    margin-right: 15px;
+  }
+}
+
 @media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    padding: 40px 0;
+  }
+  
   .hero h2 {
     font-size: 32px;
+    line-height: 1.2;
   }
 
   .hero p {
     font-size: 20px;
+    margin: 10px 0 0 0;
+  }
+  
+  .hero .social-links {
+    margin-top: 20px;
+  }
+  
+  .hero .social-links a {
+    font-size: 20px;
+    margin-right: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    min-height: 60vh;
+    padding: 30px 0;
+  }
+  
+  .hero h2 {
+    font-size: 28px;
+    line-height: 1.1;
+  }
+
+  .hero p {
+    font-size: 18px;
+    margin: 8px 0 0 0;
+  }
+  
+  .hero .social-links {
+    margin-top: 15px;
+  }
+  
+  .hero .social-links a {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+}
+
+
+.hero img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Optional: Different object-fit behavior on mobile */
+@media (max-width: 768px) {
+  .hero img {
+    object-fit: cover; /* Keep cover, but you could use 'contain' if preferred */
+    object-position: center center; /* Control focal point */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero img {
+    object-position: center 30%; /* Adjust focal point for mobile if needed */
   }
 }
 
@@ -1545,5 +1637,35 @@ section,
   color: var(--accent-color);
 }
 
+
+/* Profile image responsive styles */
+.profile-img img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+@media (max-width: 992px) {
+  .profile-img {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .profile-img img {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-img img {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-img img {
+    max-width: 220px;
+  }
+}
 
 
